@@ -5,6 +5,10 @@ const KEY = `Qzhjls8Ie8Ci683ZM0dsCA-VdVPT1_bjsiwRRkLAPWU`
 let photos = []
 let loaded = 0
 
+const loading_wheel=()=>{
+    document.querySelector('.loading-image').classList.add('hidden')
+}
+
 const image_loaded_check = ()=>{
     console.log('loaded: '+loaded)
     loaded = 0;
@@ -43,9 +47,12 @@ window.addEventListener('scroll',()=>{
             grab_photos(5);
             console.log(photos.length)
             image_loaded_check();
+            loading_wheel();
         }
     }
 })
-
-image_loaded_check();
-grab_photos(5);
+setTimeout(()=>{
+    image_loaded_check();
+    grab_photos(5);
+    loading_wheel();
+},2000)

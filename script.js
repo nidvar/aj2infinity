@@ -41,7 +41,7 @@ const grab_photos = async (number)=>{
 
 window.addEventListener('scroll',()=>{
     console.log(document.body.offsetHeight, window.scrollY)
-    if(document.body.offsetHeight - window.scrollY < 1500){
+    if(document.body.offsetHeight - window.scrollY < 1200){
         if(loaded === 5){
             console.log('time to load again')
             grab_photos(5);

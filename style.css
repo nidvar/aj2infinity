@@ -8,13 +8,16 @@ html{
 h1{
     letter-spacing: 3px;
     word-spacing: 6px;
-    margin:10px 0 0 0;
+    margin:20px 0 20px 0;
 }
 
 body{
     margin:0;
     background:whitesmoke;
     text-align:center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .loading-image{
@@ -23,3 +26,26 @@ body{
     bottom:50%;
     transform: translate(-50%, -50%);
 }
+
+.hidden{
+    display:none;
+}
+
+.xcontainer{
+    max-width:720px;
+}
+img{
+    margin:10px;
+    max-width: 700px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    h1{
+        margin:15px 0 10px 0;
+    }
+    img{
+        max-width:90%;
+        margin:5px;
+    }
+  }
